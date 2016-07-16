@@ -1,0 +1,19 @@
+Use cases
+1 open
+2 close
+3 move to request floor
+4 deal with request
+
+Classes
+1 Person
+3 UIPanel
+	4 FloorUI
+	5 ElevatorUI
+6 Elevator
+7 Request
+	8 RequestFromFloor
+	9 RequestFromElevator
+10 ElevatorController
+
+
+

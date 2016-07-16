@@ -1,4 +1,4 @@
-package ElevatorManagermentSystem;
+package ElevatorManagermentSystemMTread;
 
 public class Person {
 	private String name;

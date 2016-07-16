@@ -1,16 +1,15 @@
-package ElevatorManagermentSystem;
+package ElevatorManagermentSystemMTread;
 import java.util.*;
 
 public class Elevator extends Thread {
-	LinkedList<Person> persons;
-	int[] requests;
-	int maxSize;
-	boolean direction;
-	int curFloor;
-	boolean state;
+	private int[] requests;
+	private int maxSize;
+	private boolean direction;
+	private int curFloor;
+	private boolean state;
+	private int floors;
 	
 	public Elevator(int personsNum, int floorsNum) {
-		this.persons = new LinkedList<Person>();
 		this.requests = new int[floorsNum];
 		
 		
@@ -26,7 +25,7 @@ public class Elevator extends Thread {
 				out();
 				in();
 				
-				while(hasUp() && this.curFloor != floors.length) {
+				while(hasUp() && this.curFloor != floors) {
 					this.curFloor++;
 					out();
 					in();
@@ -37,7 +36,7 @@ public class Elevator extends Thread {
 				out();
 				in();
 				
-				while(hasUp() && this.curFloor != floors.length) {
+				while(hasUp() && this.curFloor != 0) {
 					this.curFloor++;
 					out();
 					in();
@@ -45,6 +44,14 @@ public class Elevator extends Thread {
 				direction = true;
 			}
 		}
+	}
+	
+	private void in() {
+		
+	}
+	
+	private void out() {
+		
 	}
 	
 	private boolean hasUp() {
